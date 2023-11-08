@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO DE INGRESO</title>
+    <link rel="stylesheet" href="stilosingres.css">
+</head>
+<body>
+
+     <h1>Formulario de ingreso</h1>
+    <form action="formulario1.html" method="post">
+        <input type="text" name="username" placeholder="Nombre de usuario">
+        <input type="password" name="password" placeholder="Contraseña" required pattern="sena">
+        <input type="submit" value="INGRESAR">
+      </form>
+<script>
+    function validatePassword() {
+      var password = document.getElementById("pwd").value;
+      
+      if (password === "sena") {
+        // Si la contraseña es correcta, redirige a otra página
+        window.location.href = "formulario1.html"; // Reemplaza 'otra_pagina.html' con tu URL real
+      } else {
+        // Si la contraseña es incorrecta, muestra un mensaje de error
+        alert("Contraseña incorrecta. Inténtalo de nuevo.");
+        // Evita que se envíe el formulario
+        event.preventDefault();
+      }
+    }
+  </script>
+  
+  <img src="continue.jfif" alt="continue">
+  
+</body>
+</html>
